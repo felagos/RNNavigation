@@ -20,7 +20,7 @@ export enum StackScreens {
 
 export const StackNavigation = () => {
 	return (
-		<Stack.Navigator>
+		<Stack.Navigator initialRouteName={StackScreens.Page1Screen}>
 			<Stack.Screen name={StackScreens.Page1Screen} component={Page1Screen} />
 			<Stack.Screen name={StackScreens.Page2Screen} component={Page2Screen} />
 			<Stack.Screen name={StackScreens.Page3Screen} component={Page3Screen} />
