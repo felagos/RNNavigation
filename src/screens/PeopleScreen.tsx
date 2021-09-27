@@ -4,7 +4,6 @@ import { Text, View } from 'react-native'
 import { StackParamList, StackScreens } from '../navigation/StackNavigation';
 import { styles } from '../theme/appTheme'
 
-
 interface Props extends StackScreenProps<StackParamList, StackScreens.PeopleScreen> { }
 
 export const PeopleScreen = ({ route, navigation }: Props) => {
