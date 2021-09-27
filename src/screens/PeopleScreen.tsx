@@ -1,5 +1,5 @@
+import React, { useEffect } from 'react'
 import { StackScreenProps } from '@react-navigation/stack';
-import React from 'react'
 import { Text, View } from 'react-native'
 import { StackParamList, StackScreens } from '../navigation/StackNavigation';
 import { styles } from '../theme/appTheme'
@@ -7,8 +7,12 @@ import { styles } from '../theme/appTheme'
 
 interface Props extends StackScreenProps<StackParamList, StackScreens.PeopleScreen> { }
 
-export const PeopleScreen = ({ route }: Props) => {
+export const PeopleScreen = ({ route, navigation }: Props) => {
 	const { id, name } = route.params
+
+	useEffect(() => {
+		navigation.setOptions({ title: 'Person Detail' })
+	}, [navigation])
 
 	return (
 		<View style={styles.globalMargin}>
@@ -16,5 +20,5 @@ export const PeopleScreen = ({ route }: Props) => {
 			<Text style={styles.title}>NAME: {name}</Text>
 		</View>
 	)
-	
+
 }
