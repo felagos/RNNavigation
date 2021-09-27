@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 import { useNavigation } from '@react-navigation/core'
 import { Button, Text, View } from 'react-native'
 import { styles } from '../theme/appTheme'
@@ -10,9 +10,16 @@ type StackProps = StackNavigationProp<StackParamList, StackScreens.Page2Screen>;
 export const Page2Screen = () => {
 	const navigation = useNavigation<StackProps>()
 
+	useEffect(() => {
+		navigation.setOptions({
+			title: 'hola mundo',
+			headerBackTitle: 'Atrás'
+		})
+	}, [navigation])
+
 	return (
 		<View style={styles.globalMargin}>
-			<Text>Page2Screen</Text>
+			<Text style={styles.title}>Page2Screen</Text>
 			<Button title="Ir pagina 3" onPress={() => navigation.navigate(StackScreens.Page3Screen)} />
 		</View>
 	)

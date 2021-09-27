@@ -12,7 +12,7 @@ export const Page3Screen = () => {
 
 	return (
 		<View style={styles.globalMargin}>
-			<Text>Page3Screen</Text>
+			<Text style={styles.title}>Page3Screen</Text>
 			<Button title="Back" onPress={() => navigation.goBack()} />
 		</View>
 	)
