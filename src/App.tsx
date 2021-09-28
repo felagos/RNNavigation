@@ -1,12 +1,12 @@
 import React from 'react'
 import { NavigationContainer } from '@react-navigation/native';
-import { StackNavigation } from './navigation/StackNavigation';
+import { LateralMenuNavigation } from './navigation/LateralMenuNavigation';
 
 
 export const App = () => {
 	return (
 		<NavigationContainer>
-			<StackNavigation />
+			<LateralMenuNavigation />
 		</NavigationContainer>
 	);
 }

@@ -7,5 +7,15 @@ export const styles = StyleSheet.create({
 	title: {
 		fontSize: 30,
 		marginBottom: 10
+	},
+	menuContainer: {
+		marginVertical: 30,
+		marginHorizontal: 50
+	},
+	menuText: {
+		fontSize: 20
+	},
+	menuItem: {
+		marginVertical: 10
 	}
 })
