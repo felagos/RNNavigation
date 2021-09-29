@@ -13,7 +13,7 @@ export enum MenuScreens {
 	SettingsScreen = "SettingsScreen"
 }
 
-export const LateralMenuNavigation = () => {
+export const DrawerNavigation = () => {
 	return (
 		<Drawer.Navigator screenOptions={{ headerShown: true }}
 			drawerContent={(props: DrawerContentComponentProps) => <MenuContent {...props} />} >
