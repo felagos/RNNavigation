@@ -17,5 +17,8 @@ export const styles = StyleSheet.create({
 	},
 	menuItem: {
 		marginVertical: 10
+	},
+	primary: {
+		color: '#553C7B'
 	}
 })
