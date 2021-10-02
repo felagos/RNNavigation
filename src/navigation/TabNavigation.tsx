@@ -7,6 +7,7 @@ import { Platform, Text } from 'react-native'
 import { createMaterialBottomTabNavigator } from '@react-navigation/material-bottom-tabs'
 import { styles } from '../theme/appTheme'
 import Icon from 'react-native-vector-icons/AntDesign';
+import { TopTabNavigation } from './TopTabNavigation'
 
 enum TabScreens {
 	TAB1 = "Tab 1",
@@ -41,7 +42,7 @@ const TabIOS = () => {
 		}
 		)}>
 			<BottomTabIOS.Screen name={TabScreens.TAB1} component={Tab1Screen} />
-			<BottomTabIOS.Screen name={TabScreens.TAB2} component={Tab2Screen} />
+			<BottomTabIOS.Screen name={TabScreens.TAB2} component={TopTabNavigation} />
 			<BottomTabIOS.Screen name={TabScreens.TAB3} component={StackNavigation} />
 		</BottomTabIOS.Navigator>
 	)
@@ -55,14 +56,11 @@ const TabAndroid = () => {
 				backgroundColor: styles.primary.color
 			}}
 			screenOptions={({ route }) => ({
-				tabBarIcon: ({ color }) => {
-					const iconaName = getIcon(route.name)
-					return <Icon size={15} name={iconaName} color={color} />
-				}
+				tabBarIcon: ({ color }) => <Icon size={15} name={getIcon(route.name)} color={color} />
 			})}
 		>
 			<BotomTabAndroid.Screen name={TabScreens.TAB1} component={Tab1Screen} />
-			<BotomTabAndroid.Screen name={TabScreens.TAB2} component={Tab2Screen} />
+			<BotomTabAndroid.Screen name={TabScreens.TAB2} component={TopTabNavigation} />
 			<BotomTabAndroid.Screen name={TabScreens.TAB3} component={StackNavigation} />
 		</BotomTabAndroid.Navigator>
 	)
