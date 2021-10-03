@@ -1,13 +1,15 @@
 import React from 'react'
 import { NavigationContainer } from '@react-navigation/native';
-import { DrawerNavigation } from './navigation/DrawerNavigation';
 import { TabNavigation } from './navigation/TabNavigation';
+import { AuthProvider } from './context/AuthContext';
 
 
 export const App = () => {
 	return (
 		<NavigationContainer>
-			<TabNavigation />
+			<AuthProvider>
+				<TabNavigation />
+			</AuthProvider>
 		</NavigationContainer>
 	);
 }
